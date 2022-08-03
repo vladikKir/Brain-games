@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "[![Actions Status](https://github.com/vladikKir/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/vladikKir/frontend-project-lvl1/actions)",
   "main": "index.js",
   "type": "module",
@@ -19,7 +19,8 @@
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
-    "brain-calculator": "bin/brain-calc.js"
+    "brain-calculator": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js"
   },
   "homepage": "https://github.com/vladikKir/frontend-project-lvl1#readme",
   "dependencies": {
