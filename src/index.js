@@ -18,7 +18,7 @@ export const gameEngine = (greeting, expressions, correctAnswer) => {
                 console.log(`Congratulations, ${name}!`);
             }
         } else {
-            console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer[0]}.)`);
+            console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer[i]}.`);
             console.log(`Let's try again, ${name}!`);
             break;
         }
