@@ -1,3 +1,11 @@
+About: 
+    Project "Brain-games" is a collection of five math games: brain-even, brain-calculator, record brain-gcd, brain-progression, brain-prime. To start use a name of a game as a command in terminal.
+Minimalsystem requirements:
+    OS: Node.js 13+
+Setup:
+    make install
+
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/vladikKir/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/vladikKir/frontend-project-lvl1/actions)
 
