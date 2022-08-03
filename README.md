@@ -1,5 +1,5 @@
 About: 
-    Project "Brain-games" is a collection of five math games: brain-even, brain-calculator, record brain-gcd, brain-progression, brain-prime. To start use a name of a game as a command in terminal.
+    Project "Brain-games" is a collection of five math games: brain-even, brain-calc, record brain-gcd, brain-progression, brain-prime. To start use a name of a game as a command in terminal.
 Minimalsystem requirements:
     OS: Node.js 13+
 Setup:
@@ -15,8 +15,8 @@ Setup:
 ### Asciinema record brain-even:
 [![asciicast](https://asciinema.org/a/LNSPZ4xARO6ndke6ViDYG5WWJ.svg)](https://asciinema.org/a/LNSPZ4xARO6ndke6ViDYG5WWJ)
 
-### Asciinema record brain-calculator:
-[![asciicast](https://asciinema.org/a/ecQKkbiRB6A437pdSmUHkMsHM.svg)](https://asciinema.org/a/ecQKkbiRB6A437pdSmUHkMsHM)
+### Asciinema record brain-calc:
+[![asciicast](https://asciinema.org/a/SJsCTwxXk1VLxdIa87Ck9nuRf.svg)](https://asciinema.org/a/SJsCTwxXk1VLxdIa87Ck9nuRf)
 
 ### Asciinema record brain-gcd:
 [![asciicast](https://asciinema.org/a/G0otG409YwGvXLy7w7WgBNxMY.svg)](https://asciinema.org/a/G0otG409YwGvXLy7w7WgBNxMY)
