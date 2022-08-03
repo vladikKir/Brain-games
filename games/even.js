@@ -2,9 +2,7 @@ import gameEngine from '../src/index.js';
 import randomIntsArray from '../src/randomInts.js';
 
 const greeting = 'Answer "yes" if the number is even, otherwise answer "no".';
-
 const expressions = randomIntsArray();
-
 const correctAnswer = [];
 
 for (const number of expressions) {
