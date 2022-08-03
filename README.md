@@ -9,3 +9,9 @@
 
 ### Asciinema record brain-calculator
 [![asciicast](https://asciinema.org/a/ecQKkbiRB6A437pdSmUHkMsHM.svg)](https://asciinema.org/a/ecQKkbiRB6A437pdSmUHkMsHM)
+
+### Asciinema record brain-gcd
+[![asciicast](https://asciinema.org/a/G0otG409YwGvXLy7w7WgBNxMY.svg)](https://asciinema.org/a/G0otG409YwGvXLy7w7WgBNxMY)
+
+### Asciinema record brain-progression
+[![asciicast](https://asciinema.org/a/AIuWqE4F4va8DHxcVTCRmuMQu.svg)](https://asciinema.org/a/AIuWqE4F4va8DHxcVTCRmuMQu)

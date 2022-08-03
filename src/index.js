@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export default (greeting, expressions, correctAnswer) => {
+export default (greeting, expressions, correctAnswers) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -10,13 +10,13 @@ export default (greeting, expressions, correctAnswer) => {
     console.log(`Question: ${expressions[i]}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === String(correctAnswer[i])) {
+    if (answer === String(correctAnswers[i])) {
       console.log('Correct!');
       if (i === 2) {
         console.log(`Congratulations, ${name}!`);
       }
     } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer[i]}.`);
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswers[i]}.`);
       console.log(`Let's try again, ${name}!`);
       break;
     }

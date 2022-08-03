@@ -1,9 +1,10 @@
 import gameEngine from '../src/index.js';
+import randomIntsArray from '../src/randomInts.js'
 
 const greeting = 'Find the greatest common divisor of given numbers.';
 
-const numbers1 = [Math.ceil(Math.random() * 100), Math.ceil(Math.random() * 100), Math.ceil(Math.random() * 100)];
-const numbers2 = [Math.ceil(Math.random() * 100), Math.ceil(Math.random() * 100), Math.ceil(Math.random() * 100)];
+const numbers1 = randomIntsArray();
+const numbers2 = randomIntsArray();
 
 const expressions = [];
 
