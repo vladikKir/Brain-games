@@ -6,7 +6,7 @@ const expressions = [];
 const correctAnswers = [];
 
 for (let i = 0; i < 3; i += 1) {
-  const progressionLength = () => Math.round((Math.random() + 1) * 5);
+  const progressionLength = Math.round((Math.random() + 1) * 5);
   const progressionFirstNumber = Math.round(Math.random() * 10);
   const progressionStep = Math.ceil((Math.random() + Math.random()) * 7);
 
@@ -23,6 +23,5 @@ for (let i = 0; i < 3; i += 1) {
   preogressionArray = preogressionArray.join(' ');
   expressions.push(preogressionArray);
 }
-
 
 export default () => gameEngine(greeting, expressions, correctAnswers);

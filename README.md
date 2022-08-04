@@ -22,7 +22,7 @@ Setup:
 [![asciicast](https://asciinema.org/a/G0otG409YwGvXLy7w7WgBNxMY.svg)](https://asciinema.org/a/G0otG409YwGvXLy7w7WgBNxMY)
 
 ### Asciinema record brain-progression:
-[![asciicast](https://asciinema.org/a/AIuWqE4F4va8DHxcVTCRmuMQu.svg)](https://asciinema.org/a/AIuWqE4F4va8DHxcVTCRmuMQu)
+[![asciicast](https://asciinema.org/a/8VULHEuExyM0gw9iTZTaH4vdz.svg)](https://asciinema.org/a/8VULHEuExyM0gw9iTZTaH4vdz)
 
 ### Asciinema record brain-prime:
 [![asciicast](https://asciinema.org/a/jd88YNyrry5mv3E3GwhXiaZuv.svg)](https://asciinema.org/a/jd88YNyrry5mv3E3GwhXiaZuv)
