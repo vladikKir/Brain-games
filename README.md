@@ -1,9 +1,8 @@
-About: 
-    Project "Brain-games" is a collection of five math games: brain-even, brain-calc, record brain-gcd, brain-progression, brain-prime. To start use a name of a game as a command in terminal.
-Minimalsystem requirements:
-    OS: Node.js 13+
-Setup:
-    make install
+About: Project "Brain-games" is a collection of five math games: "brain-even", "brain-calc", "record brain-gcd", "brain-progression", "brain-prime". 
+To start play you can use next commands - node bin/'name of game'.js, for example - node bin/brain-even.js that starts "brain-even" game. These commands are also contained in "package.json" file, here you can see simple commands for every game. Just use command "brain-even" to start "brain-even" game and etc.
+
+Minimal system requirements: OS - Node.js 13+
+Setup: make install
 
 
 ### Hexlet tests and linter status:
@@ -13,7 +12,7 @@ Setup:
 [![Maintainability](https://api.codeclimate.com/v1/badges/92ddc2e174380cbf2398/maintainability)](https://codeclimate.com/github/vladikKir/frontend-project-lvl1/maintainability)
 
 ### Asciinema record brain-even:
-[![asciicast](https://asciinema.org/a/LNSPZ4xARO6ndke6ViDYG5WWJ.svg)](https://asciinema.org/a/LNSPZ4xARO6ndke6ViDYG5WWJ)
+[![asciicast](https://asciinema.org/a/achwIz0SyyZ4Njn96c1a7xJ46.svg)](https://asciinema.org/a/achwIz0SyyZ4Njn96c1a7xJ46)
 
 ### Asciinema record brain-calc:
 [![asciicast](https://asciinema.org/a/SJsCTwxXk1VLxdIa87Ck9nuRf.svg)](https://asciinema.org/a/SJsCTwxXk1VLxdIa87Ck9nuRf)

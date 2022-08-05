@@ -6,13 +6,15 @@ export default (greeting, expressions, correctAnswers) => {
   console.log(`Hello, ${name}!`);
   console.log(greeting);
 
-  for (let i = 0; i < 3; i += 1) {
+  const gameRoundsCount = 3;
+
+  for (let i = 0; i < gameRoundsCount; i += 1) {
     console.log(`Question: ${expressions[i]}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === String(correctAnswers[i])) {
+    if (answer === correctAnswers[i]) {
       console.log('Correct!');
-      if (i === 2) {
+      if (i === gameRoundsCount - 1) {
         console.log(`Congratulations, ${name}!`);
       }
     } else {
