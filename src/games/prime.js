@@ -6,15 +6,17 @@ const gameRoundsCount = 3;
 const expressions = randomIntsArray(gameRoundsCount);
 const correctAnswer = [];
 
-for (let i = 0; i < expressions.length;) {
-  for (let devider = 2; devider <= expressions[i] / 2; devider += 1) {
-    if (expressions[i] % devider === 0 && expressions[i] !== devider) {
-      correctAnswer.push('no');
-      i += 1;
-      devider = 2;
-    } else {
-      correctAnswer.push('yes');
-      i += 1;
+for (let i = 0; i < expressions.length; i += 1) {
+  if (expressions[i] < 2) {
+    correctAnswer.push('no');
+  } else {
+    for (let devider = 2; devider <= expressions[i]; devider += 1) {
+      if (expressions[i] % devider === 0 && expressions[i] !== devider) {
+        correctAnswer.push('no');
+        devider = expressions[i] + 1;
+      } else if (expressions[i] === devider) {
+        correctAnswer.push('yes');
+      }
     }
   }
 }
