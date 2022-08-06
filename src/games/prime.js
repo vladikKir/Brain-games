@@ -2,7 +2,8 @@ import startGameEngine from '../index.js';
 import randomIntsArray from '../randomInts.js';
 
 const greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const expressions = randomIntsArray();
+const gameRoundsCount = 3;
+const expressions = randomIntsArray(gameRoundsCount);
 const correctAnswer = [];
 
 for (let i = 0; i < expressions.length;) {

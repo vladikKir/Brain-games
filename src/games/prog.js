@@ -21,9 +21,9 @@ const randomIntsArray = () => {
     progressionNumber += progressionStep;
   }
 
-  // '-0.1' to avoid cases when const === undefined
+  // '-0.1' to avoid cases (numberHidden === undefined)
   const numberHidden = Math.floor(Math.random() * progressionLength - 0.1);
-  correctAnswers.push(progressionArray[numberHidden]);
+  correctAnswers.push(String(progressionArray[numberHidden]));
   progressionArray[numberHidden] = '..';
   progressionArray = progressionArray.join(' ');
   expressions.push(progressionArray);

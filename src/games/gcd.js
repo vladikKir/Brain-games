@@ -2,9 +2,9 @@ import startGameEngine from '../index.js';
 import randomIntsArray from '../randomInts.js';
 
 const greeting = 'Find the greatest common divisor of given numbers.';
-
-const numbers1 = randomIntsArray();
-const numbers2 = randomIntsArray();
+const gameRoundsCount = 3;
+const numbers1 = randomIntsArray(gameRoundsCount);
+const numbers2 = randomIntsArray(gameRoundsCount);
 
 const expressions = [];
 
