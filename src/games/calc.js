@@ -29,7 +29,7 @@ for (let i = 0; i < numbers1.length; i += 1) {
       correctAnswer.push(String(numbers1[i] * numbers2[i]));
       break;
     default:
-      break;
+      throw new Error('Error, symbol is undefined');
   }
 }
 
