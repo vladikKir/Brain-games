@@ -1,9 +1,9 @@
 import startGameEngine from '../index.js';
 import randomIntsArray from '../randomInts.js';
 
-const greeting = 'Answer "yes" if the number is even, otherwise answer "no".';
-const gameRoundsCount = 3;
-const expressions = randomIntsArray(gameRoundsCount);
+const GREETING = 'Answer "yes" if the number is even, otherwise answer "no".';
+const ROUNDS_COUNT = 3;
+const expressions = randomIntsArray(ROUNDS_COUNT);
 const correctAnswer = [];
 
 for (let i = 0; i < expressions.length; i += 1) {
@@ -14,4 +14,4 @@ for (let i = 0; i < expressions.length; i += 1) {
   }
 }
 
-export default () => startGameEngine(greeting, expressions, correctAnswer);
+export default () => startGameEngine(GREETING, expressions, correctAnswer, ROUNDS_COUNT);

@@ -1,36 +1,43 @@
 import startGameEngine from '../index.js';
+import { generateRandInt } from '../randomInts.js';
 
-const greeting = 'What number is missing in the progression?';
+const GREETING = 'What number is missing in the progression?';
 
-const expressions = [];
-const correctAnswers = [];
+const ROUNDS_COUNT = 3;
+const MIN_PROGR_LENGTH = 5;
+const MAX_PROGR_LENGTH = 10;
 
-const gameRoundsCount = 3;
-
-const randomIntsArray = () => {
-  const minProgressionLength = 5;
-  const progressionLength = Math.round(Math.random() * minProgressionLength) + minProgressionLength;
-  const progressionFirstNumber = Math.round(Math.random() * 10);
-  const progressionStep = Math.ceil(Math.random() * 10);
+const makeRandomArray = () => {
+  const progressionLength = generateRandInt(MIN_PROGR_LENGTH, MAX_PROGR_LENGTH);
+  const progressionFirstNumber = generateRandInt(1, 10);
+  const progressionStep = generateRandInt(1, 10);
 
   let progressionNumber = progressionFirstNumber;
-  let progressionArray = [];
+  const randomArray = [];
 
   for (let i = 1; i <= progressionLength; i += 1) {
-    progressionArray.push(progressionNumber);
+    randomArray.push(progressionNumber);
     progressionNumber += progressionStep;
   }
-
-  // '1' to avoid cases (numberHidden === undefined)
-  const numberHidden = Math.floor(Math.random() * (progressionLength - 1));
-  correctAnswers.push(String(progressionArray[numberHidden]));
-  progressionArray[numberHidden] = '..';
-  progressionArray = progressionArray.join(' ');
-  expressions.push(progressionArray);
+  return randomArray;
 };
 
-while (expressions.length < gameRoundsCount) {
-  randomIntsArray();
-}
+const hideRandomNumber = () => {
+  const expressions = [];
+  const correctAnswers = [];
 
-export default () => startGameEngine(greeting, expressions, correctAnswers);
+  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
+    let progressionArray = makeRandomArray();
+    // '1' to avoid cases (numberHidden === undefined)
+    const numberHidden = generateRandInt(0, progressionArray.length - 1);
+    correctAnswers.push(String(progressionArray[numberHidden]));
+    progressionArray[numberHidden] = '..';
+    progressionArray = progressionArray.join(' ');
+    expressions.push(progressionArray);
+  }
+  return [expressions, correctAnswers];
+};
+const readyProgressionArray = hideRandomNumber();
+const [expressions, correctAnswers] = [readyProgressionArray[0], readyProgressionArray[1]];
+
+export default () => startGameEngine(GREETING, expressions, correctAnswers, ROUNDS_COUNT);
