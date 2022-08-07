@@ -10,10 +10,11 @@ const expressions = [];
 const correctAnswer = [];
 
 const findGreatestDivider = (number1, number2) => {
-  let greatestDivider;
+  let greatestDivider = 1;
   for (let divider = number1; divider > 0; divider -= 1) {
     if (number1 % divider === 0 && number2 % divider === 0) {
       greatestDivider = divider;
+      break;
     }
   }
   return greatestDivider;
