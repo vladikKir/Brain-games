@@ -10,26 +10,26 @@ const correctAnswer = [];
 const isNumberPrime = (expression) => {
   for (let divider = 2; divider <= Math.ceil(expression / 2); divider += 1) {
     if (expression % divider === 0 && expression !== divider) {
-      correctAnswer.push('no');
-      break;
-    } else if (divider === Math.ceil(expression / 2)) {
-      correctAnswer.push('yes');
+      return false;
+    } if (divider === Math.ceil(expression / 2)) {
+      return true;
     }
   }
+  return false;
 };
 
 for (let i = 0; i < expressions.length; i += 1) {
-  if (expressions[i] < 2) {
-    correctAnswer.push('no');
-  } else if (expressions[i] % 2 === 0) {
+  let answer;
+  if (expressions[i] % 2 === 0) {
     if (expressions[i] === 2) {
-      correctAnswer.push('yes');
+      answer = 'yes';
     } else {
-      correctAnswer.push('no');
+      answer = 'no';
     }
   } else {
-    isNumberPrime(expressions[i]);
+    answer = isNumberPrime(expressions[i]) ? 'yes' : 'no';
   }
+  correctAnswer.push(answer);
 }
 
 export default () => startGameEngine(GREETING, expressions, correctAnswer, ROUNDS_COUNT);
