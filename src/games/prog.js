@@ -1,38 +1,37 @@
 import startGameEngine from '../index.js';
-import { generateRandInt } from '../randomInts.js';
+import generateRandInt from '../randomInts.js';
 
-const GREETING = 'What number is missing in the progression?';
+const RULE = 'What number is missing in the progression?';
 
-const ROUNDS_COUNT = 3;
-const MIN_PROGR_LENGTH = 5;
-const MAX_PROGR_LENGTH = 10;
+const [MIN_PROGR_LENGTH, MAX_PROGR_LENGTH] = [5, 10];
+const [MIN_FIRST_NUMBER, MAX_FIRST_NUMBER] = [1, 10];
+const [MIN_STEP, MAX_STEP] = [1, 10];
 
-const makeProgressionArray = () => {
+const makeProgression = () => {
   const progressionLength = generateRandInt(MIN_PROGR_LENGTH, MAX_PROGR_LENGTH);
-  const progressionFirstNumber = generateRandInt(1, 10);
-  const progressionStep = generateRandInt(1, 10);
+  const progressionFirstNumber = generateRandInt(MIN_FIRST_NUMBER, MAX_FIRST_NUMBER);
+  const progressionStep = generateRandInt(MIN_STEP, MAX_STEP);
 
   let progressionNumber = progressionFirstNumber;
-  const randomArray = [];
+  const progression = [];
 
   for (let i = 1; i <= progressionLength; i += 1) {
-    randomArray.push(progressionNumber);
+    progression.push(progressionNumber);
     progressionNumber += progressionStep;
   }
-  return randomArray;
+  return progression;
 };
 
-const expressions = [];
-const correctAnswers = [];
+const makeProgressionRound = () => {
+  const progressionArray = makeProgression();
+  const numberHiddenIndex = generateRandInt(0, progressionArray.length - 1);
 
-for (let i = 0; i < ROUNDS_COUNT; i += 1) {
-  const progressionArray = makeProgressionArray();
+  const correctAnswer = (String(progressionArray[numberHiddenIndex]));
 
-  const numberHidden = generateRandInt(0, progressionArray.length - 1);
-  correctAnswers.push(String(progressionArray[numberHidden]));
+  progressionArray[numberHiddenIndex] = '..';
+  const question = (progressionArray.join(' '));
 
-  progressionArray[numberHidden] = '..';
-  expressions.push(progressionArray.join(' '));
-}
+  return [question, correctAnswer];
+};
 
-export default () => startGameEngine(GREETING, expressions, correctAnswers, ROUNDS_COUNT);
+export default () => startGameEngine(RULE, makeProgressionRound);

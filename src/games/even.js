@@ -1,17 +1,15 @@
 import startGameEngine from '../index.js';
-import randomIntsArray from '../randomInts.js';
+import generateRandInt from '../randomInts.js';
 
-const GREETING = 'Answer "yes" if the number is even, otherwise answer "no".';
-const ROUNDS_COUNT = 3;
-const expressions = randomIntsArray(ROUNDS_COUNT);
-const correctAnswer = [];
+const RULE = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-for (let i = 0; i < expressions.length; i += 1) {
-  if (expressions[i] % 2 === 0) {
-    correctAnswer.push('yes');
-  } else {
-    correctAnswer.push('no');
-  }
-}
+const isEven = (number) => number % 2 === 0;
 
-export default () => startGameEngine(GREETING, expressions, correctAnswer, ROUNDS_COUNT);
+const makeEvenRound = () => {
+  const question = generateRandInt();
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+
+  return [question, correctAnswer];
+};
+
+export default () => startGameEngine(RULE, makeEvenRound);

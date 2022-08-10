@@ -1,36 +1,34 @@
 import startGameEngine from '../index.js';
-import randomIntsArray, { generateRandInt } from '../randomInts.js';
+import generateRandInt from '../randomInts.js';
 
-const GREETING = 'What is the result of the expression?';
+const RULE = 'What is the result of the expression?';
 
-const ROUNDS_COUNT = 3;
-
-const numbers1 = randomIntsArray(ROUNDS_COUNT);
-const numbers2 = randomIntsArray(ROUNDS_COUNT);
-const operators = ['+', '-', '*'];
-
-const expressions = [];
-const correctAnswer = [];
-
-for (let i = 0; i < numbers1.length; i += 1) {
-  // '-1' to avoid cases (operatorRand === undefined)
-  const operatorRand = generateRandInt(0, operators.length - 1);
-  const operator = operators[operatorRand];
-
-  expressions.push(`${numbers1[i]} ${operator} ${numbers2[i]}`);
+const calculate = (number1, number2, operator) => {
   switch (operator) {
     case '+':
-      correctAnswer.push(String(numbers1[i] + numbers2[i]));
-      break;
+      return (String(number1 + number2));
     case '-':
-      correctAnswer.push(String(numbers1[i] - numbers2[i]));
-      break;
+      return (String(number1 - number2));
     case '*':
-      correctAnswer.push(String(numbers1[i] * numbers2[i]));
-      break;
+      return (String(number1 * number2));
     default:
       throw new Error('Error, symbol is undefined');
   }
-}
+};
 
-export default () => startGameEngine(GREETING, expressions, correctAnswer, ROUNDS_COUNT);
+const operators = ['+', '-', '*'];
+
+const makeCalcRound = () => {
+  const operatorRand = generateRandInt(0, operators.length - 1);
+  const operator = operators[operatorRand];
+
+  const number1 = generateRandInt();
+  const number2 = generateRandInt();
+
+  const question = (`${number1} ${operator} ${number2}`);
+  const correctAnswer = calculate(number1, number2, operator);
+
+  return [question, correctAnswer];
+};
+
+export default () => startGameEngine(RULE, makeCalcRound);

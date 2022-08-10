@@ -1,8 +1,14 @@
-About: Project "Brain-games" is a collection of five math games: "brain-even", "brain-calc", "record brain-gcd", "brain-progression", "brain-prime". 
-To start play you can use next commands - node bin/'name of game'.js, for example - node bin/brain-even.js that starts "brain-even" game. These commands are also contained in "package.json" file, here you can see simple commands for every game. Just use command "brain-even" to start "brain-even" game and etc.
+About: 
+    Project "Brain-games" is a collection of five math games: "brain-even", "brain-calc", "record brain-gcd", "brain-progression", "brain-prime". 
+    
+Launch:
+    To start play you can use next commands - node bin/'name of game'.js, for example - node bin/brain-even.js that starts "brain-even" game. These commands are also contained in "package.json" file, here you can see simple commands for every game. Just use command "brain-even" to start "brain-even" game and etc.
 
-Minimal system requirements: OS - Node.js 13+
-Setup: make install
+Minimal system requirements: 
+    OS - Node.js 13+
+
+Setup: 
+    make install
 
 
 ### Hexlet tests and linter status:
