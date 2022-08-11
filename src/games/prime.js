@@ -1,5 +1,5 @@
 import startGameEngine from '../index.js';
-import generateRandInt from '../randomInts.js';
+import generateRandInt from '../randomInt.js';
 
 const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

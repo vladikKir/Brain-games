@@ -1,7 +1,9 @@
 import startGameEngine from '../index.js';
-import generateRandInt from '../randomInts.js';
+import generateRandInt from '../randomInt.js';
 
 const RULE = 'What is the result of the expression?';
+
+const operators = ['+', '-', '*'];
 
 const calculate = (number1, number2, operator) => {
   switch (operator) {
@@ -15,8 +17,6 @@ const calculate = (number1, number2, operator) => {
       throw new Error('Error, symbol is undefined');
   }
 };
-
-const operators = ['+', '-', '*'];
 
 const makeCalcRound = () => {
   const operatorRand = generateRandInt(0, operators.length - 1);
