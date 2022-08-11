@@ -6,6 +6,8 @@ const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (expression) => {
   if (expression % 2 === 0 && expression !== 2) {
     return false;
+  } if (expression === 2) {
+    return true;
   }
   for (let divider = 2; divider <= Math.ceil(expression / 2); divider += 1) {
     if (expression % divider === 0 && expression !== divider) {
