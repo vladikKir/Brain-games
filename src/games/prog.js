@@ -5,7 +5,7 @@ const RULE = 'What number is missing in the progression?';
 
 const MIN_PROGR_LENGTH = 5;
 const MAX_PROGR_LENGTH = 10;
-const MIN_FIRST_NUMBER = 1
+const MIN_FIRST_NUMBER = 1;
 const MAX_FIRST_NUMBER = 10;
 const MIN_STEP = 1;
 const MAX_STEP = 10;
