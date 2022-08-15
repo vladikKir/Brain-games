@@ -17,16 +17,16 @@ make install
 To start play you can use next commands - node bin/'name of game'.js, for example - node bin/brain-even.js that starts "brain-even" game. These commands are also contained in "package.json" file, here you can see simple commands for every game. Just use command "brain-even" to start "brain-even" game and etc.
 
 ### Asciinema record brain-even:
-[![asciicast](https://asciinema.org/a/achwIz0SyyZ4Njn96c1a7xJ46.svg)](https://asciinema.org/a/achwIz0SyyZ4Njn96c1a7xJ46)
+[![asciicast](https://asciinema.org/a/Vx3njCEvkZCdffnU8ELvwzJFk.svg)](https://asciinema.org/a/Vx3njCEvkZCdffnU8ELvwzJFk)
 
 ### Asciinema record brain-calc:
-[![asciicast](https://asciinema.org/a/SJsCTwxXk1VLxdIa87Ck9nuRf.svg)](https://asciinema.org/a/SJsCTwxXk1VLxdIa87Ck9nuRf)
+[![asciicast](https://asciinema.org/a/nQvUkKYhgEueJmcTkf338lzNy.svg)](https://asciinema.org/a/nQvUkKYhgEueJmcTkf338lzNy)
 
 ### Asciinema record brain-gcd:
-[![asciicast](https://asciinema.org/a/G0otG409YwGvXLy7w7WgBNxMY.svg)](https://asciinema.org/a/G0otG409YwGvXLy7w7WgBNxMY)
+[![asciicast](https://asciinema.org/a/rtWBBniqt3yxDj5qyM8IY3d24.svg)](https://asciinema.org/a/rtWBBniqt3yxDj5qyM8IY3d24)
 
 ### Asciinema record brain-progression:
-[![asciicast](https://asciinema.org/a/8VULHEuExyM0gw9iTZTaH4vdz.svg)](https://asciinema.org/a/8VULHEuExyM0gw9iTZTaH4vdz)
+[![asciicast](https://asciinema.org/a/x7qr0GrKBSgEUt9B4O2iyaQUb.svg)](https://asciinema.org/a/x7qr0GrKBSgEUt9B4O2iyaQUb)
 
 ### Asciinema record brain-prime:
-[![asciicast](https://asciinema.org/a/jd88YNyrry5mv3E3GwhXiaZuv.svg)](https://asciinema.org/a/jd88YNyrry5mv3E3GwhXiaZuv)
+[![asciicast](https://asciinema.org/a/CABjTLDeh3sjSw9chLeRCYhxI.svg)](https://asciinema.org/a/CABjTLDeh3sjSw9chLeRCYhxI)
